@@ -1,0 +1,82 @@
+@font-face {
+  src: url("https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap");
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+}
+
+body nav {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  height: 10vw;
+  width: 100vw;
+  position: fixed;
+  top: 2vh;
+  z-index: 2;
+}
+
+body nav .nav--container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+body nav .nav--container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  list-style: none;
+}
+
+body nav .nav--container ul li#current a {
+  text-decoration: underline;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body nav .nav--container ul a {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+body nav .nav--container ul #menu {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (max-width: 868px) {
+  body nav .nav--container ul {
+    visibility: hidden;
+  }
+  body nav .nav--container #menu {
+    visibility: visible;
+  }
+}
+
+body #container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,111 @@
+@font-face {
+    src: url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap');
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  $colors: (
+      text-color: rgba(255, 255, 255, 0.7),
+      text-color-light: rgba(255, 255, 255, 0.5),
+      color: #fffb00
+  );
+  
+  @function color($color-name) {
+      @return map-get($colors, $color-name) 
+  }
+
+
+body {
+    height: 300vh;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+
+    nav {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        height: 10vw;
+        width: 100vw;
+        position: fixed;
+        top: 2vh;
+        z-index: 2;
+
+        .nav--container {
+            display: grid;
+            justify-content: end;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-content: space-between;
+                list-style: none;
+                
+                li#current a{
+                    text-decoration: underline;
+                    font-weight: 400;
+                    color: color(text-color);
+                }
+                a {
+                    font-size: 1.3em;
+                    color: color(text-color-light);
+                    text-decoration: none;
+                    margin-left: 30px;
+                    margin-right: 30px;
+                    
+                }
+
+                #menu {
+                    filter: invert(1);
+                    height:35px;
+                    width: 35px;
+                }
+
+            }
+            @media screen and (max-width: 868px) {
+                ul{
+                    visibility: hidden;
+                }
+    
+                #menu {
+                    visibility: visible;
+                }
+            }
+        }
+
+    }
+
+    #container {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+
+    // #content {
+    //     height: 100%;
+    //     width: 100%;
+    //     // padding: 10%;
+    //     margin-top: 100vh;
+    //     position: absolute;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+
+    //     // grid-template-columns: auto auto;
+
+    //     #content-left {
+    //         height: 80vh;
+    //         width: 40vw;
+    //         background: white;
+    //         // grid-column: 1;
+    //     }
+
+    //     #content-right {
+    //         height: 80vh;
+    //         width: 40vw;
+    //         background: white;
+    //         // grid-column: 2;
+    //     }
+    // }
+}
